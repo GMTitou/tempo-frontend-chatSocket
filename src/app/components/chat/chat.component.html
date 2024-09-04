@@ -1,0 +1,13 @@
+<div class="chat-container">
+  <h2>Messagerie instantanée</h2>
+
+  <ul class="messages-list">
+    <li *ngFor="let msg of messages">
+      De {{ msg.fromId }} : {{ msg.message }}
+    </li>
+  </ul>
+
+  <input [(ngModel)]="recipientId" placeholder="ID destinataire">
+  <input [(ngModel)]="message" placeholder="Tapez votre message...">
+  <button (click)="sendMessage()">Envoyer</button>
+</div>
